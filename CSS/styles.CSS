@@ -1,0 +1,310 @@
+/* color scheme 
+(black) #000000, 
+(hot-pink) #EB285D,
+(dark-orange) #EB5401, 
+(light-orange) #EB9B49, 
+(light-pink) #EBA193,
+(white) #EBDAB9;
+  */
+
+/* ---------- BEGINNING OF CLASS AND ID LIST ---------- */
+/* NAVIGATION BORDER */
+
+.center {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+/* IMAGES reduces image visibility by reducing width and hiding overflow*/
+.col {
+  background-color: #000000;
+  margin: auto;
+  border-radius: 8px;
+  color: #eba193;
+}
+/* APPLIED TO FOOTER COPYRIGHT */
+.float_R {
+  float: right;
+}
+
+#pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 10px;
+  margin: 0px;
+  padding: 5px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+.nav_item {
+  justify-content: space-between;
+}
+nav {
+  border-bottom: 6px dotted #eb285d;
+  border-radius: 10px;
+}
+
+/* ---------- END CLASS AND ID ELEMENTS --------- */
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #ebdab9;
+}
+
+/* removed min-width -updated body selector to class element- general for all pages */
+body.body_content {
+  background: #eba193;
+  max-width: 1224px;
+  font-size: 16px;
+  color: #000000;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000000;
+  border-radius: 8px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  background-color: #000000;
+  margin: 10px;
+  padding-bottom: 100px;
+  padding-top: 10px;
+  color: #eb285d;
+  height: auto;
+  text-align: center;
+}
+footer ul {
+  list-style-type: none;
+}
+
+footer a:link {
+  color: #eb285d;
+}
+footer a:visited {
+  color: #eb5401;
+}
+footer a:hover {
+  color: #ebdab9;
+  transition: all 2ms ease-in-out;
+}
+footer a:focus {
+  color: #000000;
+}
+footer a:active {
+  color: #ebdab9;
+}
+footer li {
+  padding: 5px;
+  float: left;
+}
+
+/* ---------- H AND HEADER elements ---------- */
+
+h1.h_font {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+}
+h1:hover {
+  background-color: #000000;
+  color: #eba193;
+  border-radius: 15px;
+  padding: 5px;
+  transition: all 1s ease-in-out;
+}
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+}
+header {
+  background-color: #ebdab9;
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  border: 1px solid #ebdab9;
+  border-radius: 12px;
+  height: fit-content;
+  width: 98%;
+}
+
+/* ---------- IMAGES ---------- */
+img {
+  border-radius: 10px;
+}
+/* displays image fully when user hovers over */
+/*img:hover {
+  width: 100%;
+  overflow: visible;
+  transition: all 2ms ease-in-out;
+}
+
+/* ---------- MAIN  ---------- */
+/* update main links using descendant selectors*/
+main a:link {
+  color: #eb285d;
+}
+main a:visited {
+  color: #eb5401;
+}
+main a:hover {
+  color: #ebdab9;
+  transition: all 2ms ease-in-out;
+}
+main a:focus {
+  color: #000000;
+}
+main a:active {
+  color: #ebdab9;
+}
+/* added padding to main body to move closer to center*/
+main.m_padding {
+  padding: 5px 20px;
+}
+
+/* ---------- NAVIGATION ---------- */
+/* POSITION element applied */
+nav {
+  width: 100%;
+  position: static;
+  margin-top: 0px;
+}
+nav a:link {
+  background-color: #000000;
+  color: #eb285d;
+  padding: 15px 28px;
+  border-radius: 25px;
+}
+nav a:hover {
+  background-color: #eb285d;
+  color: #000000;
+  border-radius: 25px;
+  transition: all 2ms ease-in-out;
+}
+
+nav li {
+  display: inline-block;
+  margin: 15px;
+}
+nav ul {
+  list-style-type: none;
+}
+
+/* ---------- PARAGRAPHS AND LISTS ---------- */
+/*pseudo element modifies first letter of paragraphs to be larger than rest of paragraph*/
+p::first-letter {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* pseudo class used to modify ul first child font size and color*/
+ul:first-child {
+  font-size: 20px;
+  color: #eb285d;
+}
+/* changes bullet styles */
+ul {
+  list-style-type: square;
+}
+
+/* ---------- BEGINNING OF MEDIA QUERIES ----------- */
+
+/* ---------- INDEX MEDIA ---------- */
+@media (min-width: 700px) {
+  .container_index {
+    display: flex;
+
+    flex-direction: row;
+  }
+  .item_index_col {
+    order: 2;
+    justify-content: space-around;
+    margin: 18px;
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 699px) {
+  .container_index {
+    display: flex;
+    flex-direction: column;
+  }
+  .item_index_col {
+    margin: 10px;
+  }
+}
+
+/* ---------- NAVIGATION MEDIA ---------- */
+
+@media (max-width: 850px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav_item {
+    justify-content: space-around;
+    order: 1;
+  }
+  header {
+    width: 90%;
+  }
+}
+/* ---------- FOOTER ---------- */
+@media (max-width: 850px) {
+  footer li {
+    text-align: center;
+    font-size: 12px;
+    display: inline-block;
+  }
+}
+/*@media (min-width: 1000px) {
+  footer li {
+    float: left;
+  }
+}*/
+
+/* ---------- GALLERY MEDIA ---------- */
+/*@media (min-width: 1080px) {
+  
+  }
+}*/
+@media (max-width: 900px) {
+  #pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    margin: 0px;
+    padding: 5px;
+  }
+}
+@media (max-width: 650px) {
+  #pictures {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    margin: 0px;
+    padding: 5px;
+  }
+}
+/* ---------- END OF MEDIA QUERIES ----------- */
